@@ -1,0 +1,26 @@
+{
+  "name": "backend-boiler",
+  "version": "1.0.0",
+  "description": "boiler-plate for other node projects",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "dev": "nodemon --ext * app.js"
+  },
+  "keywords": [
+    "boiler-plate",
+    "mernstack",
+    "node",
+    "express"
+  ],
+  "author": "shelgir",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
