@@ -1,9 +1,11 @@
 import express from "express";
 import userRouter from "./src/routes/user.routes.js";
 import mongoose from "mongoose";
+import dotenv from "dotenv";
 
 async function main() {
-  await mongoose.connect("mongodb://localhost:27017/boiler");
+  dotenv.config("dotenv");
+  await mongoose.connect(process.env.MONGO_URL);
   const app = express();
 
   app.use(express.json());
@@ -11,8 +13,8 @@ async function main() {
 
   app.use(userRouter);
 
-  app.listen(6000, () => {
-    console.log("listening on port 6000");
+  app.listen(process.env.PORT, () => {
+    console.log("listening on port :" + process.env.PORT);
   });
 }
 
